@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>plg_system_fontawesome</name>
+	<author>Bruno Batista</author>
+	<creationDate>Jun 2013</creationDate>
+	<copyright>Copyright (C) 2013 AtomTech, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>bruno@atomtech.com.br</authorEmail>
+	<authorUrl>http://www.atomtech.com.br</authorUrl>
+	<version>1.0</version>
+	<description>PLG_SYSTEM_FONTAWESOME_XML_DESCRIPTION</description>
+	<scriptfile />
+	<files>
+		<filename plugin="fontawesome">fontawesome.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR/pt-BR.plg_system_fontawesome.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.plg_system_fontawesome.sys.ini</language>
+	</languages>
+	<media destination="plg_system_fontawesome" folder="media">
+		<folder>css</folder>
+		<folder>font</folder>
+		<folder>less</folder>
+		<filename>index.html</filename>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="minified" type="radio" class="btn-group" default="1" filter="integer" label="PLG_SYSTEM_FONTAWESOME_FIELD_MINIFIED_LABEL" description="PLG_SYSTEM_FONTAWESOME_FIELD_MINIFIED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
