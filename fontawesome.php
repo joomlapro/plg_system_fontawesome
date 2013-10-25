@@ -42,22 +42,6 @@ class PlgSystemFontawesome extends JPlugin
 			JHtml::stylesheet('plg_system_fontawesome/font-awesome.css', false, true, false);
 		}
 
-		// Get the browser object instance.
-		$browser = JBrowser::getInstance();
-
-		// Load any ie7 variation.
-		if ($browser->getBrowser() == 'msie' && intval($browser->getMajor()) == 7)
-		{
-			if ($minified)
-			{
-				JHtml::stylesheet('plg_system_fontawesome/font-awesome-ie7.min.css', false, true, false);
-			}
-			else
-			{
-				JHtml::stylesheet('plg_system_fontawesome/font-awesome-ie7.css', false, true, false);
-			}
-		}
-
 		return true;
 	}
 }
