@@ -2,7 +2,9 @@
 /**
  * @package     Joomla.Plugin
  * @subpackage  System.Fontawesome
- * @copyright   Copyright (C) 2013 AtomTech, Inc. All rights reserved.
+ *
+ * @author      Bruno Batista <bruno@atomtech.com.br>
+ * @copyright   Copyright (C) 2013 AtomTech IT Services. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,6 +16,7 @@ defined('_JEXEC') or die;
  *
  * @package     Joomla.Plugin
  * @subpackage  System.Fontawesome
+ * @author      Bruno Batista <bruno@atomtech.com.br>
  * @since       3.1
  */
 class PlgSystemFontawesome extends JPlugin
@@ -40,6 +43,22 @@ class PlgSystemFontawesome extends JPlugin
 		else
 		{
 			JHtml::stylesheet('plg_system_fontawesome/font-awesome.css', false, true, false);
+		}
+
+		// Get the browser object instance.
+		$browser = JBrowser::getInstance();
+
+		// Load any ie7 variation.
+		if ($browser->getBrowser() == 'msie' && intval($browser->getMajor()) == 7)
+		{
+			if ($minified)
+			{
+				JHtml::stylesheet('plg_system_fontawesome/font-awesome-ie7.min.css', false, true, false);
+			}
+			else
+			{
+				JHtml::stylesheet('plg_system_fontawesome/font-awesome-ie7.css', false, true, false);
+			}
 		}
 
 		return true;
