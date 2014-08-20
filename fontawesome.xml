@@ -22,8 +22,7 @@
 	</languages>
 	<media destination="plg_system_fontawesome" folder="media">
 		<folder>css</folder>
-		<folder>font</folder>
-		<folder>less</folder>
+		<folder>fonts</folder>
 		<filename>index.html</filename>
 	</media>
 	<config>
